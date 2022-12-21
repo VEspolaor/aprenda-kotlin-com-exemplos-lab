@@ -17,17 +17,18 @@ fun main() {
     val ListaConteudos = listOf<ConteudoEducacional>(
     ConteudoEducacional(" Java",60, Nivel.Avançado),
     ConteudoEducacional(" JavaScript",50, Nivel.Intermediario),
-    ConteudoEducacional(" Python",40, Nivel.Basico)
+    ConteudoEducacional(" Python",45, Nivel.Basico)
     )
     val Kotlin = Formacao ("Kotlin",ListaConteudos,Nivel.Avançado)
     
     Kotlin.matricular(Usuario("Jonas"))
     
     println("Curso ${Kotlin.nome} de nivel ${Kotlin.nivel}")
-    Kotlin.conteudos.forEach{
-        println("${it.nome}, duração ${it.duracao} minutos,nivel ${it.nivel}")
-    }
     Kotlin.inscritos.forEach {
-        println("${it.nome} está matriculado no curso de ${Kotlin.nome}")
+        println("${it.nome} está matriculado no curso de ${Kotlin.nome}, ele vai aprender:")
     }
+    Kotlin.conteudos.forEach{
+        println(" ${it.nome}, com duração de ${it.duracao}  minutos, de nivel ${it.nivel}")
+    }
+   
 }

@@ -15,9 +15,10 @@ data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>, 
 
 fun main() {
     val ListaConteudos = listOf<ConteudoEducacional>(
-    ConteudoEducacional(" Java",60, Nivel.Avançado),
-    ConteudoEducacional(" JavaScript",50, Nivel.Intermediario),
-    ConteudoEducacional(" Python",45, Nivel.Basico)
+    ConteudoEducacional(" A logica de Java",60, Nivel.Avançado),
+    ConteudoEducacional(" A logica JavaScript",50, Nivel.Intermediario),
+    ConteudoEducacional(" A logica Python",45, Nivel.Basico),
+    ConteudoEducacional(" A linguagem de Kotlin",60, Nivel.Avançado)
     )
     val Kotlin = Formacao ("Kotlin",ListaConteudos,Nivel.Avançado)
     
